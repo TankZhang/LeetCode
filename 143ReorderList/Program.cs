@@ -10,6 +10,7 @@ namespace _143ReorderList
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
