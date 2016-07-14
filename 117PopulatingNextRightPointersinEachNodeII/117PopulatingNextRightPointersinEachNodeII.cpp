@@ -79,6 +79,40 @@ void connect(struct TreeLinkNode *root) {
 	}
 }
 
+//网上的答案
+void connect1(struct TreeLinkNode *root) {
+	struct TreeLinkNode *pos, *tmp, *level, *tag;
+	if (root == NULL)
+		return;
+	level = root;
+	while (true)
+	{
+		pos = level;
+		tag = level;
+		tmp = NULL;
+		while (pos)
+		{
+			if (pos->left)
+			{
+				if (!tmp)
+					tmp = level = pos->left;
+				else
+					tmp = tmp->next = pos->left;
+			}
+			if (pos->right)
+			{
+				if (!tmp)
+					tmp = level = pos->right;
+				else
+					tmp = tmp->next = pos->right;
+			}
+			pos = pos->next;
+		}
+		if (tag == level) //No next level
+			break;
+	}
+}
+
 //构造树结构
 void Creat(struct TreeLinkNode *root, int n)
 {
@@ -113,7 +147,7 @@ int main()
 	root->left->left = NULL;
 	root->left->right = NULL;
 	temp = root;
-	connect(temp);
+	connect1(temp);
 	getchar();
 	return 0;
 
