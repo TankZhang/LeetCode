@@ -10,7 +10,7 @@
   struct TreeLinkNode *left, *right, *next;
  };
 
-
+ //连接树的每层
 void connect(struct TreeLinkNode *root) {
 	if (NULL == root)
 		return;
