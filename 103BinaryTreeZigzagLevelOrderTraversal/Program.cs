@@ -18,7 +18,7 @@ namespace _103BinaryTreeZigzagLevelOrderTraversal
             head = head.right;
             head.left = new TreeNode(3);
             head.right = new TreeNode(4);
-            List<List<int>> result = ZigzagLevelOrder(root);
+            List<List<int>> result = ZigzagLevelOrder2(root);
             ReadList(result);
             Console.ReadKey();
         }
@@ -36,9 +36,50 @@ namespace _103BinaryTreeZigzagLevelOrderTraversal
             }
         }
 
-        static List<List<int>> ZigzagLevelOrder(TreeNode root)
+        //参考的方法
+        static List<List<int>> ZigzagLevelOrder2(TreeNode root)
         {
             List<List<int>> l = new List<List<int>>();
+            if (root == null) return l;
+            Stack<TreeNode> s1 = new Stack<TreeNode>();
+            Stack<TreeNode> s2 = new Stack<TreeNode>();
+            s1.Push(root);
+            int n1 = s1.Count;
+            int n2 = s2.Count;
+            while(n1!=0||n2!=0)
+            {
+                n1 = s1.Count;
+                n2 = s2.Count;
+                List<int> tempL = new List<int>();
+                for (int i = 0; i < n1; i++)
+                {
+                    root = s1.Pop();
+                    tempL.Add(root.val);
+                    if (root.left != null)
+                        s2.Push(root.left);
+                    if (root.right != null)
+                        s2.Push(root.right);
+                }
+                for (int i = 0; i < n2; i++)
+                {
+                    root = s2.Pop();
+                    tempL.Add(root.val);
+                    if (root.right != null)
+                        s1.Push(root.right);
+                    if (root.left != null)
+                        s1.Push(root.left);
+                }
+                l.Add(tempL);
+            }
+            l.RemoveAt(l.Count - 1);
+            return l;
+        }
+
+            //自己的办法
+            static List<List<int>> ZigzagLevelOrder(TreeNode root)
+        {
+            List<List<int>> l = new List<List<int>>();
+            if (root == null) return l;
             GetResult(0, root, l);
             List<List<int>> result = new List<List<int>>();
             for (int i = 0; i < l.Count; i++)
