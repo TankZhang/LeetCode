@@ -12,7 +12,7 @@ namespace _121BestTimetoBuyandSellStock
         static void Main(string[] args)
         {
             int[] prices = {1,5,3,79,3 };
-            Console.WriteLine("最大收益是:{0}",MaxProfit2(prices));
+            Console.WriteLine("最大收益是:{0}", MaxProfit(prices));
             Console.ReadKey();
         }
 
@@ -23,17 +23,16 @@ namespace _121BestTimetoBuyandSellStock
                 return 0;
             int days = prices.Length;
             List<int> l = new List<int>();
+            int res = 0;
             for (int i = 0; i < days; i++)
             {
                 for (int j = i+1; j < days; j++)
                 {
                     l.Add(prices[j] - prices[i]);
+                    res = Math.Max(prices[j] - prices[i], res);
                 }
             }
-            l.Sort();
-            if (l.Count == 0 || l[l.Count - 1] < 0)
-                return 0;
-            return l[l.Count - 1];
+            return res;
         }
 
         //简单的方法
