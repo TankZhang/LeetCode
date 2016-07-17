@@ -14,7 +14,7 @@ namespace _236LowestCommonAncestorofaBinaryTree
             int n = 3;
             TreeNode root = new TreeNode(n);
             Creat(root,n-1);
-            TreeNode parent = LowestCommonAncestor(root, root.left.left, root.left.right.left);
+            TreeNode parent = LowestCommonAncestor2(root, root.left.left, root.left.right.left);
             Console.WriteLine(parent.val);
             Console.ReadKey();
         }
@@ -26,6 +26,22 @@ namespace _236LowestCommonAncestorofaBinaryTree
                 root.right = new TreeNode(n+1);
             Creat(root.left, n - 1);
             Creat(root.right, n - 1);
+        }
+
+        //简单方法
+        static TreeNode LowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q)
+        {
+            if (p == null) return q;
+            if (q == null) return p;
+            if (root == null || root == p || root == q) return root;
+            TreeNode left = LowestCommonAncestor2(root.left, p, q);
+            TreeNode right = LowestCommonAncestor2(root.right, p, q);
+            if (left != null && right != null)
+                return root;
+           else if (left == null)
+                return right;
+            else
+                return left;
         }
 
         static TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
