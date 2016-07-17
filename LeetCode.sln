@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "122BestTimetoBuyandSellStoc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "123BestTimetoBuyandSellStockIII", "123BestTimetoBuyandSellStockIII\123BestTimetoBuyandSellStockIII.csproj", "{AFE05500-4A88-42E5-BFA6-51B038E27C0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "236LowestCommonAncestorofaBinaryTree", "236LowestCommonAncestorofaBinaryTree\236LowestCommonAncestorofaBinaryTree.csproj", "{2F1E4604-0286-47EE-9E47-215D69ADCF48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,6 +163,18 @@ Global
 		{AFE05500-4A88-42E5-BFA6-51B038E27C0C}.Release|x64.Build.0 = Release|Any CPU
 		{AFE05500-4A88-42E5-BFA6-51B038E27C0C}.Release|x86.ActiveCfg = Release|Any CPU
 		{AFE05500-4A88-42E5-BFA6-51B038E27C0C}.Release|x86.Build.0 = Release|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Debug|x64.Build.0 = Debug|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Debug|x86.Build.0 = Debug|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Release|x64.ActiveCfg = Release|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Release|x64.Build.0 = Release|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Release|x86.ActiveCfg = Release|Any CPU
+		{2F1E4604-0286-47EE-9E47-215D69ADCF48}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
