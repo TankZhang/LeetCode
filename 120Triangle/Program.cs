@@ -69,7 +69,7 @@ namespace _120Triangle
                 }
             }
             int min;
-            if (levelCount % 2 == 0)
+            if (levelCount % 2 == 1)
             {
                 min = l[0];
                 foreach (int item in l)
