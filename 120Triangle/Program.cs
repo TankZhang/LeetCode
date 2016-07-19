@@ -22,9 +22,41 @@ namespace _120Triangle
             z.Add(c);
             //z.Add(d);
             //z.Add(e);
-            Console.WriteLine(MinimumTotal(z));
+            Console.WriteLine(MinimumTotal2(z));
             Console.ReadKey();
         }
+
+        //网上淘来方法，写法简单，有递归。
+        static int MinimumTotal2(IList<IList<int>> triangle)
+        {
+            int level = triangle.Count;
+            if (level == 0) return 0;
+            if (level == 1) return triangle[0][0];
+            if (level == 2) return triangle[1][0] < triangle[1][1] ? triangle[0][0] + triangle[1][0] : triangle[0][0] + triangle[1][1];
+            int[] dp = new int[level];
+            dp[0] = triangle[0][0];
+            return MinimumLevel(triangle, dp, 1);
+        }
+        static int MinimumLevel(IList<IList<int>> triangle,int[] dp,int level)
+        {
+            int pre = dp[0], temp;
+            dp[0] +=triangle[level][0];
+            for (int i = 1; i < level; i++)
+            {
+                temp = dp[i];
+                dp[i] = Math.Min(pre, temp) + triangle[level][i];
+                pre = temp;
+            }
+            dp[level] = triangle[level][level] + pre;
+
+            if(level+1==triangle.Count)
+            {
+               return dp.Min();
+            }
+           return MinimumLevel(triangle, dp, level + 1);
+        }
+
+        //自己的方法，写法复杂，方法一致，无递归
         static int MinimumTotal(IList<IList<int>> triangle)
         {
             int levelCount = triangle.Count;
