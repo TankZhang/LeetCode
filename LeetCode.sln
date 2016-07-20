@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "120Triangle", "120Triangle\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "118PascalsTriangle", "118PascalsTriangle\118PascalsTriangle.csproj", "{6933B03B-671B-4324-81FB-6599524F2E5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "39CombinationSum", "39CombinationSum\39CombinationSum.csproj", "{76005B3E-661F-4D40-A549-7F162416A850}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -229,6 +231,18 @@ Global
 		{6933B03B-671B-4324-81FB-6599524F2E5B}.Release|x64.Build.0 = Release|Any CPU
 		{6933B03B-671B-4324-81FB-6599524F2E5B}.Release|x86.ActiveCfg = Release|Any CPU
 		{6933B03B-671B-4324-81FB-6599524F2E5B}.Release|x86.Build.0 = Release|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Debug|x64.Build.0 = Debug|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Debug|x86.Build.0 = Debug|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Release|x64.ActiveCfg = Release|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Release|x64.Build.0 = Release|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Release|x86.ActiveCfg = Release|Any CPU
+		{76005B3E-661F-4D40-A549-7F162416A850}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
