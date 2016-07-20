@@ -43,13 +43,14 @@ namespace _40CombinationSumII
             List<int> combination = new List<int>();
             Array.Sort(candidates);
             Go(candidates, result, combination, target, 0);
-            IList<IList<int>> ultimateResult = new List<IList<int>>();
-            foreach (var item in result)
-            {
-                if (Contains(ultimateResult, item)) continue;
-                ultimateResult.Add(item);
-            }
-            return ultimateResult;
+            //IList<IList<int>> ultimateResult = new List<IList<int>>();
+            //foreach (var item in result)
+            //{
+            //    if (Contains(ultimateResult, item)) continue;
+            //    ultimateResult.Add(item);
+            //}
+            //return ultimateResult;
+            return result;
         }
 
         //主要思想：如果得到了目标值，将当前列表加入result。如果没有得到值，进入for循环，放入1个合适值，进入Go，如果合适退出，如果不合适进入for，for走完会退出Go，然后将最近的一个不合适的值去掉再在for中循环。
@@ -62,6 +63,7 @@ namespace _40CombinationSumII
             }
             for (int i = start; i < candidates.Count() && candidates[i] <= target; i++)
             {
+                if (i > start && candidates[i - 1] == candidates[i]) continue;
                 combination.Add(candidates[i]);
                 Go(candidates, result, combination, target - candidates[i], i+1);
                 combination.Remove(combination.Last());
