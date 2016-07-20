@@ -28,7 +28,7 @@ namespace _39CombinationSum
             return result;
         }
 
-        //
+        //主要思想：如果得到了目标值，将当前列表加入result。如果没有得到值，进入for循环，放入1个合适值，进入Go，如果合适退出，如果不合适进入for，for走完会退出Go，然后将最近的一个不合适的值去掉再在for中循环。
         private static void Go(int[] candidates, IList<IList<int>> result, List<int> combination, int target, int start)
         {
             if(target==0)
