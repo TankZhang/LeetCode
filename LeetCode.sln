@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "232ImplementQueueusingStack
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "225ImplementStackusingQueues", "225ImplementStackusingQueues\225ImplementStackusingQueues.csproj", "{E0FD54B1-6F09-4D36-84AA-DE08F8748C85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "141LinkedListCycle", "141LinkedListCycle\141LinkedListCycle.csproj", "{A3BAA984-A28A-4BB8-877B-80F42702C2C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -327,6 +329,18 @@ Global
 		{E0FD54B1-6F09-4D36-84AA-DE08F8748C85}.Release|x64.Build.0 = Release|Any CPU
 		{E0FD54B1-6F09-4D36-84AA-DE08F8748C85}.Release|x86.ActiveCfg = Release|Any CPU
 		{E0FD54B1-6F09-4D36-84AA-DE08F8748C85}.Release|x86.Build.0 = Release|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Debug|x64.Build.0 = Debug|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Debug|x86.Build.0 = Debug|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Release|x64.ActiveCfg = Release|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Release|x64.Build.0 = Release|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Release|x86.ActiveCfg = Release|Any CPU
+		{A3BAA984-A28A-4BB8-877B-80F42702C2C8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
