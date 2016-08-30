@@ -79,6 +79,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "136SingleNumber", "136Singl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "46Permutations", "46Permutations\46Permutations.csproj", "{F918A835-DA8A-4427-8C34-52E86ECC12E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14LongestCommonPrefix", "14LongestCommonPrefix\14LongestCommonPrefix.csproj", "{252446EE-089F-463B-BE95-60DD652B27B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -531,6 +533,18 @@ Global
 		{F918A835-DA8A-4427-8C34-52E86ECC12E7}.Release|x64.Build.0 = Release|Any CPU
 		{F918A835-DA8A-4427-8C34-52E86ECC12E7}.Release|x86.ActiveCfg = Release|Any CPU
 		{F918A835-DA8A-4427-8C34-52E86ECC12E7}.Release|x86.Build.0 = Release|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Debug|x64.Build.0 = Debug|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Debug|x86.Build.0 = Debug|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Release|x64.ActiveCfg = Release|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Release|x64.Build.0 = Release|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Release|x86.ActiveCfg = Release|Any CPU
+		{252446EE-089F-463B-BE95-60DD652B27B2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

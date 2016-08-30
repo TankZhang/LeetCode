@@ -10,14 +10,36 @@ namespace _000Test
     {
         static void Main(string[] args)
         {
-            int a = 0;
-            while(a<10)
+            int[,] mat= new int[,] { { 1,2 }, { 2,3 }, { 3,4 } };
+            int[,] res = Go(true, mat);
+            int r = mat.GetLength(0);
+            int c = mat.GetLength(1);
+            for (int i = 0; i < c; i++)
             {
-                a++;
-                int b = a+1;
-                Console.WriteLine(b);
+                for (int j = 0; j < r; j++)
+                {
+                    Console.Write("{0}  ",res[i, j]);
+                }
+                Console.WriteLine();
             }
+
             Console.ReadKey();
+        }
+
+        static int[,] Go(bool flag,int[,] mat)
+        {
+            int r = mat.GetLength(0);
+            int c = mat.GetLength(1);
+            int[,] temp = new int[c,r];
+            for(int i=0;i<r;i++)
+                for(int j=0;j<c;j++)
+                {
+                    if (flag)
+                        temp[j, r - i - 1] = mat[i, j];
+                    else
+                        temp[c - j - 1, i] = mat[i, j];
+                }
+            return temp;
         }
     }
 }
