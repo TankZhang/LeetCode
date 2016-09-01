@@ -81,6 +81,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "46Permutations", "46Permuta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14LongestCommonPrefix", "14LongestCommonPrefix\14LongestCommonPrefix.csproj", "{252446EE-089F-463B-BE95-60DD652B27B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "051N-Queens", "051N-Queens\051N-Queens.csproj", "{B834A287-796F-466F-99A5-D61F96BF790F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -545,6 +547,18 @@ Global
 		{252446EE-089F-463B-BE95-60DD652B27B2}.Release|x64.Build.0 = Release|Any CPU
 		{252446EE-089F-463B-BE95-60DD652B27B2}.Release|x86.ActiveCfg = Release|Any CPU
 		{252446EE-089F-463B-BE95-60DD652B27B2}.Release|x86.Build.0 = Release|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Debug|x64.Build.0 = Debug|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Debug|x86.Build.0 = Debug|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Release|x64.ActiveCfg = Release|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Release|x64.Build.0 = Release|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Release|x86.ActiveCfg = Release|Any CPU
+		{B834A287-796F-466F-99A5-D61F96BF790F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
