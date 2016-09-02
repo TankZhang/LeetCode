@@ -11,7 +11,7 @@ namespace _299BullsandCows
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(GetHint("11", "11"));
+            Console.WriteLine(GetHint2("114234123213433215465", "35325725727211"));
             Console.ReadKey();
         }
         static string GetHint(string secret, string guess)
@@ -47,6 +47,32 @@ namespace _299BullsandCows
             }
             return nYes + "A" + nNo + "B";
         }
+
+        //快速的解法
+        static string GetHint2(string secret, string guess) { 
+        int bulls = 0;
+        int cows = 0;
+        var dict = new Dictionary<char, int>();
+        for(int i = 0; i<secret.Length; ++i){
+            if (guess[i] == secret[i]){
+                bulls++;
+            }
+            else{
+                if (!dict.ContainsKey(secret[i])){
+                    dict[secret[i]] = 0;
+                }
+                if (!dict.ContainsKey(guess[i])){
+                    dict[guess[i]] = 0;
+                }
+                if (dict[secret[i]]++ < 0)
+                    cows++;
+                if (dict[guess[i]]-- > 0)
+                    cows++;
+            }
+        }
         
+        
+        return bulls + "A" + cows + "B";
+        }
     }
 }
