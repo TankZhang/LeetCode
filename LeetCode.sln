@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14LongestCommonPrefix", "14
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "051N-Queens", "051N-Queens\051N-Queens.csproj", "{B834A287-796F-466F-99A5-D61F96BF790F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "299BullsandCows", "299BullsandCows\299BullsandCows.csproj", "{9A03D271-0F56-40D1-9B36-90BB3FDF6427}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -559,6 +561,18 @@ Global
 		{B834A287-796F-466F-99A5-D61F96BF790F}.Release|x64.Build.0 = Release|Any CPU
 		{B834A287-796F-466F-99A5-D61F96BF790F}.Release|x86.ActiveCfg = Release|Any CPU
 		{B834A287-796F-466F-99A5-D61F96BF790F}.Release|x86.Build.0 = Release|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Debug|x64.Build.0 = Debug|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Debug|x86.Build.0 = Debug|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Release|x64.ActiveCfg = Release|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Release|x64.Build.0 = Release|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Release|x86.ActiveCfg = Release|Any CPU
+		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
