@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "051N-Queens", "051N-Queens\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "299BullsandCows", "299BullsandCows\299BullsandCows.csproj", "{9A03D271-0F56-40D1-9B36-90BB3FDF6427}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "279PerfectSquares", "279PerfectSquares\279PerfectSquares.csproj", "{93D82550-FA35-4E86-B2ED-FBB52F06749A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -573,6 +575,18 @@ Global
 		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Release|x64.Build.0 = Release|Any CPU
 		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Release|x86.ActiveCfg = Release|Any CPU
 		{9A03D271-0F56-40D1-9B36-90BB3FDF6427}.Release|x86.Build.0 = Release|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Debug|x64.Build.0 = Debug|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Debug|x86.Build.0 = Debug|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Release|x64.ActiveCfg = Release|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Release|x64.Build.0 = Release|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Release|x86.ActiveCfg = Release|Any CPU
+		{93D82550-FA35-4E86-B2ED-FBB52F06749A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
