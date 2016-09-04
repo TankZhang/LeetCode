@@ -19,6 +19,7 @@ namespace _268MissingNumber
             Console.WriteLine(MissingNumber(nums));
             Console.ReadKey();
         }
+
         static int MissingNumber(int[] nums)
         {
             Array.Sort(nums);
@@ -37,6 +38,18 @@ namespace _268MissingNumber
                     h = m;
             }
             return l;
+        }
+
+        //异或的做法,超快
+        static int MissingNumber1(int[] nums)
+        {
+            int res = nums.Length;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                res ^= i;
+                res ^= nums[i];
+            }
+            return res;
         }
     }
 }
