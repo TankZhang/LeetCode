@@ -95,6 +95,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "93RestoreIPAddresses", "93R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "313SuperUglyNumber", "313SuperUglyNumber\313SuperUglyNumber.csproj", "{379A7FF0-FED8-44A2-982F-28387C5092B2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "000TestCPP", "000TestCPP\000TestCPP.vcxproj", "{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -643,6 +645,16 @@ Global
 		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Release|x64.Build.0 = Release|Any CPU
 		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Release|x86.ActiveCfg = Release|Any CPU
 		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Release|x86.Build.0 = Release|Any CPU
+		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Debug|x64.ActiveCfg = Debug|x64
+		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Debug|x64.Build.0 = Debug|x64
+		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Debug|x86.ActiveCfg = Debug|Win32
+		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Debug|x86.Build.0 = Debug|Win32
+		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Release|Any CPU.ActiveCfg = Release|Win32
+		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Release|x64.ActiveCfg = Release|x64
+		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Release|x64.Build.0 = Release|x64
+		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Release|x86.ActiveCfg = Release|Win32
+		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
