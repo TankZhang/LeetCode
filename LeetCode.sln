@@ -93,6 +93,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "268MissingNumber", "268Miss
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "93RestoreIPAddresses", "93RestoreIPAddresses\93RestoreIPAddresses.csproj", "{2C0FDE27-31EA-4B1B-A2DF-7C64406861BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "313SuperUglyNumber", "313SuperUglyNumber\313SuperUglyNumber.csproj", "{379A7FF0-FED8-44A2-982F-28387C5092B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -629,6 +631,18 @@ Global
 		{2C0FDE27-31EA-4B1B-A2DF-7C64406861BB}.Release|x64.Build.0 = Release|Any CPU
 		{2C0FDE27-31EA-4B1B-A2DF-7C64406861BB}.Release|x86.ActiveCfg = Release|Any CPU
 		{2C0FDE27-31EA-4B1B-A2DF-7C64406861BB}.Release|x86.Build.0 = Release|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Debug|x64.Build.0 = Debug|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Debug|x86.Build.0 = Debug|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Release|x64.ActiveCfg = Release|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Release|x64.Build.0 = Release|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Release|x86.ActiveCfg = Release|Any CPU
+		{379A7FF0-FED8-44A2-982F-28387C5092B2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
