@@ -97,6 +97,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "313SuperUglyNumber", "313Su
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "000TestCPP", "000TestCPP\000TestCPP.vcxproj", "{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "135Candy", "135Candy\135Candy.csproj", "{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -655,6 +657,18 @@ Global
 		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Release|x64.Build.0 = Release|x64
 		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Release|x86.ActiveCfg = Release|Win32
 		{EBFD6685-EE95-4CF9-ACA8-D24ECA1D4341}.Release|x86.Build.0 = Release|Win32
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Debug|x64.Build.0 = Debug|Any CPU
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Debug|x86.Build.0 = Debug|Any CPU
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Release|x64.ActiveCfg = Release|Any CPU
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Release|x64.Build.0 = Release|Any CPU
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Release|x86.ActiveCfg = Release|Any CPU
+		{3C0BDB47-7F9D-4E49-9677-C9A3A2B32870}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
