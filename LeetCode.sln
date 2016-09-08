@@ -101,6 +101,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "135Candy", "135Candy\135Can
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "119PascalsTriangleII", "119PascalsTriangleII\119PascalsTriangleII.csproj", "{F98FFFCE-68CD-4ECD-99E7-F1C1F42B4B75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "342PowerofFour", "342PowerofFour\342PowerofFour.csproj", "{D92C1A39-0C99-4985-BEB7-606193C73992}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -683,6 +685,18 @@ Global
 		{F98FFFCE-68CD-4ECD-99E7-F1C1F42B4B75}.Release|x64.Build.0 = Release|Any CPU
 		{F98FFFCE-68CD-4ECD-99E7-F1C1F42B4B75}.Release|x86.ActiveCfg = Release|Any CPU
 		{F98FFFCE-68CD-4ECD-99E7-F1C1F42B4B75}.Release|x86.Build.0 = Release|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Debug|x64.Build.0 = Debug|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Debug|x86.Build.0 = Debug|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Release|x64.ActiveCfg = Release|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Release|x64.Build.0 = Release|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Release|x86.ActiveCfg = Release|Any CPU
+		{D92C1A39-0C99-4985-BEB7-606193C73992}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
