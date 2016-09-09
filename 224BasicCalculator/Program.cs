@@ -18,26 +18,45 @@ namespace _224BasicCalculator
         //其他方法
         static int Calculate1(string s)
         {
+            if (s == null || s.Length == 0) return 0;
 
             Stack<int> stack = new Stack<int>();
-            stack.Push(1);
-            int result = 0, op = 1;
-            StringBuilder sb = new StringBuilder();
+            int res = 0;
+            int sign = 1;
             for (int i = 0; i < s.Length; i++)
             {
-                if (char.IsDigit(s[i])) sb.Append(s[i]);
-                if (i == s.Length - 1 || !char.IsDigit(s[i]))
+                char c = s[i];
+                if (char.IsDigit(c))
                 {
-                    if (sb.Length != 0)
-                        result += Convert.ToInt32(sb.ToString()) * op * stack.Peek();
-                    if (s[i] == '+') op = 1;
-                    else if (s[i] == '-') op = -1;
-                    else if (s[i] == '(') { stack.Push(op * stack.Peek()); op = 1; }
-                    else if (s[i] == ')') stack.Pop();
-                    sb.Clear();
+                    int cur = c - '0';
+                    while (i + 1 < s.Length && char.IsDigit(s[i + 1]))
+                    {
+                        cur = 10 * cur + s[++i] - '0';
+                    }
+                    res += sign * cur;
+                }
+                else if (c == '-')
+                {
+                    sign = -1;
+                }
+                else if (c == '+')
+                {
+                    sign = 1;
+                }
+                else if (c == '(')
+                {
+                    stack.Push(res);
+                    res = 0;
+                    stack.Push(sign);
+                    sign = 1;
+                }
+                else if (c == ')')
+                {
+                    res = stack.Pop() * res + stack.Pop();
+                    sign = 1;
                 }
             }
-            return result;
+            return res;
         }
 
         static int Calculate(string s)
