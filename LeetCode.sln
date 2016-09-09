@@ -103,6 +103,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "119PascalsTriangleII", "119
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "342PowerofFour", "342PowerofFour\342PowerofFour.csproj", "{D92C1A39-0C99-4985-BEB7-606193C73992}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "224BasicCalculator", "224BasicCalculator\224BasicCalculator.csproj", "{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -697,6 +699,18 @@ Global
 		{D92C1A39-0C99-4985-BEB7-606193C73992}.Release|x64.Build.0 = Release|Any CPU
 		{D92C1A39-0C99-4985-BEB7-606193C73992}.Release|x86.ActiveCfg = Release|Any CPU
 		{D92C1A39-0C99-4985-BEB7-606193C73992}.Release|x86.Build.0 = Release|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Debug|x64.Build.0 = Debug|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Debug|x86.Build.0 = Debug|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Release|x64.ActiveCfg = Release|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Release|x64.Build.0 = Release|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Release|x86.ActiveCfg = Release|Any CPU
+		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
