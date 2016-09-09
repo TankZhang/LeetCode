@@ -105,6 +105,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "342PowerofFour", "342Powero
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "224BasicCalculator", "224BasicCalculator\224BasicCalculator.csproj", "{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "227BasicCalculatorII", "227BasicCalculatorII\227BasicCalculatorII.csproj", "{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -711,6 +713,18 @@ Global
 		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Release|x64.Build.0 = Release|Any CPU
 		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Release|x86.ActiveCfg = Release|Any CPU
 		{FE499FA7-FA0E-4D1A-86FE-9B7C6FCE7661}.Release|x86.Build.0 = Release|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Debug|x64.Build.0 = Debug|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Debug|x86.Build.0 = Debug|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Release|x64.ActiveCfg = Release|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Release|x64.Build.0 = Release|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Release|x86.ActiveCfg = Release|Any CPU
+		{9B978A59-BC4B-45F3-86DA-A1A88BFBCA0B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
