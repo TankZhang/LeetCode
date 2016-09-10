@@ -10,9 +10,34 @@ namespace _000Test
     {
         static void Main(string[] args)
         {
-            Baowei();
+            Go();
             Console.ReadKey();
         }
+
+        //小于某数
+        static void Go()
+        {
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] intS = new int[ss.Length];
+            for (int i = 0; i < ss.Length; i++)
+                intS[i] = int.Parse(ss[i]);
+            int[] res = new int[ss.Length];
+            for (int i = 0; i < ss.Length; i++)
+            {
+                int count = 0;
+                for (int j = i+1; j < ss.Length; j++)
+                if (intS[j] < intS[i])
+                        count++;
+                res[i] = count;
+            }
+            for (int i = 0; i < ss.Length; i++)
+            {
+                Console.Write("{0} ", res[i]);
+            }
+        }
+
+
 
         //采购单
         static void CaiGouDan()
