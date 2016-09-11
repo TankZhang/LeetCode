@@ -3,22 +3,53 @@
 #include<vector>
 using namespace std;
 
-int main() {
-	int n;
-	while (cin >> n) {
-		int num;
-		int nCurSum = 0;
-		int nGreatestSum = 0x80000000;
-		for (int i = 0; i != n; ++i) {
-			cin >> num;
-			if (nCurSum <= 0)
-				nCurSum = num;
-			else
-				nCurSum += num;
-			if (nCurSum > nGreatestSum)
-				nGreatestSum = nCurSum;
-		}
-		cout << nGreatestSum << endl;
-	}
+#define A 4+5
+#define B A*A
+
+class X
+{
+public:
+	void xoo() {}
+};
+
+enum etest
+{
+	e1,
+	e2, e3 = 10,
+	e4,
+	e5='a',
+	e6
+}epr;
+
+struct st
+{
+	int c;
+	short a;
+	char b;
+};
+
+int f(int a, int b, int c)
+{
 	return 0;
 }
+
+
+
+
+
+int x = 4;
+void incre()
+{
+	static int x = 1;
+	x *= x + 1;
+	printf("%d", x);
+}
+
+int main() {
+
+	st t;
+	cout << sizeof(t) << endl;
+
+	getchar();
+}
+

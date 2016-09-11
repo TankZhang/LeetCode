@@ -10,8 +10,67 @@ namespace _000Test
     {
         static void Main(string[] args)
         {
-            ZuiDaMianji();
+            Zhuanhuan();
             Console.ReadKey();
+        }
+
+        //二进制转换
+        static void Zhuanhuan()
+        {
+            int n = int.Parse(Console.ReadLine());
+            string s = "";
+            int high = 90, low = -90, mid;
+            while (s.Length < 6)
+            {
+                mid = (high + low) / 2;
+                if (n >= mid)
+                {
+                    s += "1";
+                    low = mid;
+                }
+                else
+                {
+                    s += "0";
+                    high = mid;
+                }
+            }
+            Console.WriteLine(s);
+        }
+
+
+
+        //输出多少对质数的和
+        static void Zhishuhe(int n)
+        {
+            if (n == 1)
+            {
+                Console.WriteLine(0);
+                return;
+            }
+            if (n == 2)
+            {
+                Console.WriteLine(1);
+                return;
+            }
+            bool[] flags = new bool[n];
+            flags[0] = false;
+            flags[1] = true;
+            flags[2] = true;
+            for (int i = 3; i < n; i++)
+            {
+                flags[i] = true;
+                for (int j = 2; j < i; j++)
+                    if(i%j==0)
+                    {
+                        flags[i] = false;
+                        break;
+                    }
+            }
+            int count = 0;
+            for (int i = 1; i < n/2+1; i++)
+             if (flags[i] && flags[n - i])
+                    count++;
+            Console.WriteLine(count);
         }
 
         //实现最大面积
