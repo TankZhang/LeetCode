@@ -10,9 +10,110 @@ namespace _000Test
     {
         static void Main(string[] args)
         {
-            Go();
+            ZuiDaMianji();
             Console.ReadKey();
         }
+
+        //实现最大面积
+        static void ZuiDaMianji()
+        {
+            string s = Console.ReadLine();
+            string[] ss = s.Split(' ');
+            int[] ints = new int[ss.Length];
+            int[] lengths = new int[ss.Length];
+            for (int i = 0; i < ss.Length; i++)
+            { ints[i] = int.Parse(ss[i]);
+                lengths[i] = 0; }
+            for (int i=0;i<ss.Length;i++)
+            {
+                int high = ints[i];
+                lengths[i] = high;
+                for(int j=i+1;j<ss.Length;j++)
+                {
+                    if (ints[j] >= ints[i])
+                        lengths[i] += high;
+                    else
+                        break;
+                }
+            }
+            Array.Sort(lengths);
+
+            Console.WriteLine(lengths[ss.Length-1]);
+            Console.ReadKey();
+        }
+
+        //多叉树
+        static void DuoChaShu()
+        {
+            string s = Console.ReadLine();
+            List<List<int>> intL = new List<List<int>>();
+            while(s!="")
+            {
+                string[] ss = s.Split(' ');
+                List<int> iL = new List<int>();
+                foreach (string item in ss)
+                {
+                    iL.Add(int.Parse(item));
+                }
+                intL.Add(iL);
+                s = Console.ReadLine();
+            }
+            int[] nodeNum = new int[intL.Count];
+            for (int i = 0; i < intL.Count; i++)
+                nodeNum[i] = 0;
+            List<List<int>> resList = new List<List<int>>();
+            resList.Add(new List<int>() { intL[0][0] });
+            int n = 1;
+            while(IsThereN(n,intL,resList))
+            {
+                GetCeng(n, intL, resList);
+                n++;
+            }
+            foreach (var item in resList)
+            {
+                foreach (var item1 in item)
+                {
+                    Console.Write("{0} ", item1);
+                }
+            }
+        }
+
+        //判断是否有下一层
+        static bool IsThereN(int n, List<List<int>> intL, List<List<int>> resList)
+        {
+            foreach (var item in resList[n-1])
+            {
+                if (GetStart(intL, item)!=null)
+                    return true;
+            }
+            return false;
+        }
+
+
+        static void GetCeng(int n, List<List<int>> intL, List<List<int>> resList)
+        {
+            List<int> cengList = new List<int>();
+            for (int i = 0; i < resList[n-1].Count; i++)
+            {
+                List<int> temp = GetStart(intL, resList[n - 1][i]);
+                if (temp == null)
+                    continue;
+                for (int j = 1; j < temp.Count; j++)
+                    cengList.Add(temp[j]);
+            }
+            resList.Add(cengList);
+        }
+
+        static List<int> GetStart(List<List<int>> intL,int n)
+        {
+            foreach (var item in intL)
+            {
+                if (item[0] == n) 
+                return item;
+            }
+            return null;
+        }
+
 
         //小于某数
         static void Go()
