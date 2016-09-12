@@ -105,7 +105,9 @@ void SortText()
 			continue;
 		int k = 0;
 		while (strIn[i] != ' '&&i < strlen(strIn))
-		{k++; i++;}
+		{
+			k++; i++;
+		}
 		charNum[j++] = k;
 	}
 
@@ -189,9 +191,116 @@ void SortText2()
 
 }
 
+
+//ÇóÉ¢ÁÐÖµ
+void Qiusanliezhi()
+{
+	int i;
+	int len = 0;
+	long int HashCode = 0;
+	char str[1000];
+	gets(str);
+	if (str == NULL)
+	{
+		return;
+	}
+	len = strlen(str);
+	if (len == 1)
+	{
+		HashCode = str[0] * 31;
+
+	}
+	else
+	{
+		for (i = 0; i < len; i++)
+		{
+			HashCode = HashCode * 31 + str[i];
+		}
+	}
+	printf("%lu", HashCode);
+	//system("pause");
+	getchar();
+	return 0;
+}
+
+void Qiusanliezhi12()
+{
+	int i;
+	int len = 0;
+	long unsigned int HashCode = 0;
+	char str[1000];
+	gets(str);
+	if (str == NULL)
+	{
+		return;
+	}
+	len = strlen(str);
+	if (len == 1)
+	{
+		HashCode = (int)str[0] * 31;
+
+	}
+	else
+	{
+		for (i = 0; i<len; i++)
+		{
+			HashCode = HashCode * 31 + (int)str[i];
+		}
+	}
+	printf("%lu", HashCode);
+	//system("pause");
+	getchar();
+	return 0;
+
+}
+
+void Test912_1()
+{
+		int i;
+		int len = 0;
+		unsigned long int HashCode = 0;
+		char str[1000];
+		gets(str);
+		if (str == NULL)
+		{
+			return;
+		}
+		len = strlen(str);
+		if (len == 1)
+		{
+			HashCode = (int)str[0] * 31;
+
+		}
+		else
+		{
+			for (i = 0; i<len; i++)
+			{
+				HashCode = HashCode * 31 + (int)str[i];
+			}
+		}
+		printf("%lu", HashCode);
+		getchar();
+		return 0;
+}
+
+
+void Test9122()
+{
+	char s[256];
+	char *p;
+	unsigned long long int h = 0;
+
+	scanf("%s", s);
+	for (p = s; *p; p++) {
+		h = h * 31 + *p;
+	}
+	printf("%llu", h);
+	getchar();
+}
+
 int main(void)
 {
-	SortText2();
+	Test9122();
 	getchar();
 }
 

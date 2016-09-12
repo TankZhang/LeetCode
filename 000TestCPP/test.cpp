@@ -10,6 +10,7 @@ class X
 {
 public:
 	void xoo() {}
+	 X() {}
 };
 
 enum etest
@@ -49,7 +50,7 @@ int main() {
 
 	st t;
 	cout << sizeof(t) << endl;
-
+	X *x = new X();
 	getchar();
 }
 
