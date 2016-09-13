@@ -298,9 +298,15 @@ void Test9122()
 	getchar();
 }
 
+
+
+
 int main(void)
 {
-	Test9122();
+	char str[10] = "abcdefg";
+	strcpy(str, "123456");
+	memcpy(str, "147258", 5);
+	printf("%s", str);
 	getchar();
 }
 

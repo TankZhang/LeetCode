@@ -6,13 +6,6 @@ using namespace std;
 #define A 4+5
 #define B A*A
 
-class X
-{
-public:
-	void xoo() {}
-	 X() {}
-};
-
 enum etest
 {
 	e1,
@@ -34,7 +27,21 @@ int f(int a, int b, int c)
 	return 0;
 }
 
-
+class t_classA {
+public:
+	t_classA() {};
+	~t_classA() {};
+};
+class t_classB {
+public:
+	t_classB() {};
+	virtual ~t_classB() {};
+};
+class t_classC :public t_classA, public t_classB {
+public:
+	t_classC() {};
+	virtual ~t_classC() {};
+};
 
 
 
@@ -48,9 +55,15 @@ void incre()
 
 int main() {
 
-	st t;
-	cout << sizeof(t) << endl;
-	X *x = new X();
+	int nLenA = sizeof(t_classA);
+	t_classA oA;
+	int nLenAObject = sizeof(oA);
+	int nLenB = sizeof(t_classB);
+	t_classB oB;
+	int nLenBObject = sizeof(oB);
+	int nLenC = sizeof(t_classC);
+	t_classC oC;
+	int nLenCObject = sizeof(oC);
 	getchar();
 }
 
