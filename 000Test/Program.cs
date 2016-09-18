@@ -10,14 +10,46 @@ namespace _000Test
     {
         static void Main(string[] args)
         {
-            charupaixu();
+            Console.WriteLine(numOfZero(10));
             Console.ReadKey();
+        }
+
+
+        //迷宫问题
+        static void Tiaochu()
+        {
+            string[] str = Console.ReadLine().Trim().Split(' ');
+            int row = int.Parse(str[0]);
+            int column = int.Parse(str[1]);
+            int hp = int.Parse(str[2]);
+            int[,] map = new int[row, column];
+            for (int i = 0; i < row; i++)
+            {
+                string[] inputs = Console.ReadLine().Trim().Split(' ');
+                for (int j = 0; j < column; j++)
+                    map[i, j] = int.Parse(inputs[j]);
+            }
+            Stack<int> sDirec = new Stack<int>();
+            int nowR = 0;
+            int nowC = 0;
+            //bool isArrive = Tianchu(map, sDirec, nowR, nowC, hp,1);
+            Console.WriteLine();
+        }
+
+        static int numOfZero(int n)
+        {
+            int num = 0, i;
+            for (i = 5; i <= n; i *= 5)
+            {
+                num += n / i;
+            }
+            return num;
         }
 
         //伪代码
         static void charupaixu()
         {
-            int[] A = { 29,6,28,20,2,24};
+            int[] A = { 29, 6, 28, 20, 2, 24 };
             for (int i = 1; i <= 3; i++)
             {
                 int e = A[i];
@@ -80,15 +112,15 @@ namespace _000Test
             {
                 flags[i] = true;
                 for (int j = 2; j < i; j++)
-                    if(i%j==0)
+                    if (i % j == 0)
                     {
                         flags[i] = false;
                         break;
                     }
             }
             int count = 0;
-            for (int i = 1; i < n/2+1; i++)
-             if (flags[i] && flags[n - i])
+            for (int i = 1; i < n / 2 + 1; i++)
+                if (flags[i] && flags[n - i])
                     count++;
             Console.WriteLine(count);
         }
@@ -101,13 +133,15 @@ namespace _000Test
             int[] ints = new int[ss.Length];
             int[] lengths = new int[ss.Length];
             for (int i = 0; i < ss.Length; i++)
-            { ints[i] = int.Parse(ss[i]);
-                lengths[i] = 0; }
-            for (int i=0;i<ss.Length;i++)
+            {
+                ints[i] = int.Parse(ss[i]);
+                lengths[i] = 0;
+            }
+            for (int i = 0; i < ss.Length; i++)
             {
                 int high = ints[i];
                 lengths[i] = high;
-                for(int j=i+1;j<ss.Length;j++)
+                for (int j = i + 1; j < ss.Length; j++)
                 {
                     if (ints[j] >= ints[i])
                         lengths[i] += high;
@@ -117,7 +151,7 @@ namespace _000Test
             }
             Array.Sort(lengths);
 
-            Console.WriteLine(lengths[ss.Length-1]);
+            Console.WriteLine(lengths[ss.Length - 1]);
             Console.ReadKey();
         }
 
@@ -126,7 +160,7 @@ namespace _000Test
         {
             string s = Console.ReadLine();
             List<List<int>> intL = new List<List<int>>();
-            while(s!="")
+            while (s != "")
             {
                 string[] ss = s.Split(' ');
                 List<int> iL = new List<int>();
@@ -143,7 +177,7 @@ namespace _000Test
             List<List<int>> resList = new List<List<int>>();
             resList.Add(new List<int>() { intL[0][0] });
             int n = 1;
-            while(IsThereN(n,intL,resList))
+            while (IsThereN(n, intL, resList))
             {
                 GetCeng(n, intL, resList);
                 n++;
@@ -160,9 +194,9 @@ namespace _000Test
         //判断是否有下一层
         static bool IsThereN(int n, List<List<int>> intL, List<List<int>> resList)
         {
-            foreach (var item in resList[n-1])
+            foreach (var item in resList[n - 1])
             {
-                if (GetStart(intL, item)!=null)
+                if (GetStart(intL, item) != null)
                     return true;
             }
             return false;
@@ -172,7 +206,7 @@ namespace _000Test
         static void GetCeng(int n, List<List<int>> intL, List<List<int>> resList)
         {
             List<int> cengList = new List<int>();
-            for (int i = 0; i < resList[n-1].Count; i++)
+            for (int i = 0; i < resList[n - 1].Count; i++)
             {
                 List<int> temp = GetStart(intL, resList[n - 1][i]);
                 if (temp == null)
@@ -183,12 +217,12 @@ namespace _000Test
             resList.Add(cengList);
         }
 
-        static List<int> GetStart(List<List<int>> intL,int n)
+        static List<int> GetStart(List<List<int>> intL, int n)
         {
             foreach (var item in intL)
             {
-                if (item[0] == n) 
-                return item;
+                if (item[0] == n)
+                    return item;
             }
             return null;
         }
@@ -206,8 +240,8 @@ namespace _000Test
             for (int i = 0; i < ss.Length; i++)
             {
                 int count = 0;
-                for (int j = i+1; j < ss.Length; j++)
-                if (intS[j] < intS[i])
+                for (int j = i + 1; j < ss.Length; j++)
+                    if (intS[j] < intS[i])
                         count++;
                 res[i] = count;
             }
@@ -235,7 +269,7 @@ namespace _000Test
             for (int i = 0; i < classNum; i++)
             {
                 s = Console.ReadLine();
-                if(dic.Keys.Contains(s))
+                if (dic.Keys.Contains(s))
                     dic[s]++;
                 else
                     dic.Add(s, 1);
@@ -279,7 +313,7 @@ namespace _000Test
                 hills[i] = int.Parse(ss[i]);
             int res = nNum;
             for (int i = 0; i < nNum; i++)
-                for (int j = i+2; j < i + nNum-2; j++)
+                for (int j = i + 2; j < i + nNum - 2; j++)
                 {
                     bool flag = true;
                     for (int k = i + 1; k < j - 1; k++)

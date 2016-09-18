@@ -303,10 +303,9 @@ void Test9122()
 
 int main(void)
 {
-	char str[10] = "abcdefg";
-	strcpy(str, "123456");
-	memcpy(str, "147258", 5);
-	printf("%s", str);
+	int ii = 5;
+
+	printf("%d", ii);
 	getchar();
 }
 
