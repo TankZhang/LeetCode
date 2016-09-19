@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _000Test
 {
@@ -10,8 +8,61 @@ namespace _000Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(numOfZero(10));
+            wanmei0919();
             Console.ReadKey();
+        }
+
+        static void wanmei0919()
+        {
+            string str;
+            List<int> lres = new List<int>();
+            while ((str = Console.ReadLine()) != null && str != "")
+            {
+                string[] strs = str.Split(' ');
+                int[] nums = new int[strs.Length];
+                for (int i = 0; i < strs.Length; i++)
+                {
+                    try
+                    { nums[i] = int.Parse(strs[i]); }
+                    catch
+                    { nums[i] = -1; }
+                }
+                if (nums[0] <= 0)
+                    Console.WriteLine("error");
+                for (int i = 0; i < nums[0]; i++)
+                    lres.Add(nums[i + 1]);
+                try
+                {
+                    lres.Insert(nums[nums[0] + 1], nums[nums[0] + 2]);
+                }
+                catch
+                {
+                    Console.WriteLine("error");
+                }
+                try
+                {
+                    lres.RemoveAt(nums[nums.Length - 1]);
+                }
+                catch
+                {
+                    Console.WriteLine("error");
+                }
+
+                foreach (var item in lres)
+                    Console.Write("{0} ", item);
+            }
+        }
+
+        static bool IsPrimeNum(int n)
+        {
+            for (int i = 2; i <= Math.Sqrt(n); i++)
+            {
+                if (n % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
 
