@@ -1,15 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace _000Test
 {
+    class ClassTest:IComparable
+    {
+       public string a;
+       public int b; 
+        public ClassTest(string astr,string bstr)
+        {
+            a = astr;
+            b = int.Parse(bstr);
+        }
+
+        public int CompareTo(object obj)
+        {
+            ClassTest tmp = (ClassTest)obj as ClassTest;
+            if (string.Compare(a, tmp.a) > 0)
+                return 1;
+            else if (string.Compare(a, tmp.a) > 0)
+                return -1;
+            else
+            {
+                if (this.b > tmp.b)
+                    return -1;
+                else if (this.b < tmp.b)
+                    return 1;
+                else
+                    return 0;
+            }
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            wanmei0919();
+            TwoSort("a.txt");
             Console.ReadKey();
+        }
+
+        
+        static void TwoSort(string path)
+        {
+
+            StreamReader sr = new StreamReader(path, Encoding.Default);
+            string line;
+            List<ClassTest> l = new List<ClassTest>();
+            while ((line = sr.ReadLine()) != null)
+            {
+                string[] strs = line.Split(' ');
+                l.Add(new ClassTest(strs[0], strs[1]));
+            }
+            l.Sort();
+            foreach (ClassTest item in l)
+            {
+                Console.WriteLine("{0} {1}",item.a,item.b);
+            }
         }
 
         static void wanmei0919()
