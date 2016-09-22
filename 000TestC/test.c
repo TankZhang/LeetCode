@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include<stdlib.h>
 #include<string.h>
-
+#define min(a,b) ((a)>(b)?(b):(a))
 char *my_strstr(const char * str1, const char * str2, int len)
 {
 	char *tmp2, *tmp1 = (char *)malloc(len);
@@ -297,15 +297,75 @@ void Test9122()
 	printf("%llu", h);
 	getchar();
 }
+ 
+//
+int Test0921(unsigned int n) {
+	unsigned int c = 0;
+	while (n)
+	{
+		n &= (n - 1); ++c;
+	}
+	return c;
+}
 
+int Test0921_1(int *u, int *v, int m, int n) {
+	int i, j;
+	int k = m + n - 1;
+	int result = 0;
+	for (i = 0; i < k; i++) {
+		for (j = ((0 > i + 1 - n )? 0 : (i + 1 - n)); j <= ((i<m - 1)?i:(m - 1)); j++)
+			result += u[j] * v[i - j];
+	}
+	return result;
+}
 
+static unsigned char getbits(unsigned char* buffer, unsigned int from, unsigned char len) {
+	unsigned int n;
+	unsigned char m, u, t, y;
+	n = from / 8;
+	m = from % 8;
+	u = 8 - m;
+	t = (len > u ? len - u : 0);
+	y = (buffer[n] << m);
+	if (8 > len)
+		y >>= (8 - len);
+	if(t)
+		y |= (buffer[n + 1]>> (8 - t));
+	return y;
+}
 
+static unsigned int read_golomb(unsigned char* buffer, unsigned int *init)
+{
+	unsigned int x, v = 0, v2 = 0, m, len = 0, n = *init;
+
+	while (getbits(buffer, n++, 1) == 0)
+		len++;
+	x = len + n;
+	while (n<x)
+	{
+		m = min(x - n, 8);
+		v |= getbits(buffer, n, m);
+		n += m;
+		if (x - n > 8)v << 8;
+		else if (x > n)
+			v <<= (x - n);
+
+	}
+	v2 = 1;
+	for (n = 0; n < len; n++)
+		v2 <<= 1;
+	v2 = (v2 - 1) + v;
+	*init = x;
+	return v2;
+}
 
 int main(void)
 {
-	int ii = 5;
+	int count = 0;
+	for (int i = 1; i < 25; i++)
+		count += i*i;
 
-	printf("%d", ii);
+	printf("%d\n", count);
 	getchar();
 }
 

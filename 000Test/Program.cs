@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace _000Test
 {
-    class ClassTest:IComparable
+    class ClassTest0921 : IComparable
     {
-       public string a;
-       public int b; 
-        public ClassTest(string astr,string bstr)
+        public string a;
+        public int b;
+        public ClassTest0921(string astr, string bstr)
         {
             a = astr;
             b = int.Parse(bstr);
@@ -18,7 +22,7 @@ namespace _000Test
 
         public int CompareTo(object obj)
         {
-            ClassTest tmp = (ClassTest)obj as ClassTest;
+            ClassTest0921 tmp = (ClassTest0921)obj as ClassTest0921;
             if (string.Compare(a, tmp.a) > 0)
                 return 1;
             else if (string.Compare(a, tmp.a) > 0)
@@ -34,30 +38,161 @@ namespace _000Test
             }
         }
     }
+    class TreeNode0921
+    {
+        public int value;
+        public TreeNode0921 Left;
+        public TreeNode0921 Right;
+        public TreeNode0921(int i)
+        {
+            value = i;
+
+        }
+        public TreeNode0921() { }
+    }
+    class Node0921
+    {
+        public int Value;
+        public Node0921 Next;
+        public Node0921() { }
+        public Node0921(int i) { Value = i; }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            TwoSort("a.txt");
             Console.ReadKey();
         }
 
+        //只能打开一个程序的办法1,创建互斥体法：
+        static void Only1_0922_1()
+        {
+            bool blnIsRunning;
+            Mutex nutexApp = new Mutex(false, Assembly.GetExecutingAssembly().FullName, out blnIsRunning);
+            Console.WriteLine(blnIsRunning);
+            if(!blnIsRunning)
+            {
+                MessageBox.Show("程序已经运行！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+             Console.ReadKey();
+        }
+        //只能打开一个程序的办法2:保证同时只有一个客户端在运行
+        static void Only1_0922_2()
+        {
+            Mutex mutexMyapplication = new Mutex(false, "OnePorcess.exe");
+            if (!mutexMyapplication.WaitOne(100, false))
+            {
+                MessageBox.Show("程序" + Application.ProductName + "已经运行！", Application.ProductName,
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
         
+        //链表反转测试
+        static void ReveseLinkTest0921()
+        {
+            Node0921 start = new Node0921(1);
+            start.Next = new Node0921(2);
+            start.Next.Next = new Node0921(3);
+            start.Next.Next.Next = new Node0921(4);
+            start = ReverseLink0921(start);
+            Console.WriteLine("Next is the reversed linklist!");
+            while (start !=null)
+            {
+                Console.WriteLine(start.Value);
+                start = start.Next;
+            }
+        }
+
+        static Node0921 ReverseLink0921(Node0921 start)
+        {
+            Node0921 now = start.Next;
+            Node0921 before=start;
+            while (now.Next != null)
+            {
+                Node0921 t = now.Next;
+                now.Next = before;
+                if (before == start)
+                    before.Next = null;
+                before = now;
+                now = t;
+            }
+            now.Next = before;
+            return now;
+        }
+
+        //BFS和DFS测试
+        static void BFSandDFS0921()
+        {
+            TreeNode0921 t = new TreeNode0921(1);
+            t.Left = new TreeNode0921(2);
+            t.Right = new TreeNode0921(3);
+            t.Left.Left = new TreeNode0921(4);
+            Console.WriteLine("next is the BFS!");
+            BFS0921(t);
+            Console.WriteLine();
+            Console.WriteLine("next is the DFS!");
+            DFS0921(t);
+        }
+
+        static void BFS0921(TreeNode0921 tmp)
+        {
+            Queue<TreeNode0921> qTreeNode = new Queue<TreeNode0921>();
+            TreeNode0921 t = tmp;
+            qTreeNode.Enqueue(t);
+            while (qTreeNode.Count != 0)
+            {
+                t = qTreeNode.Peek();
+                Console.WriteLine(t.value);
+                qTreeNode.Dequeue();
+                if (t.Left != null)
+                    qTreeNode.Enqueue(t.Left);
+                if (t.Right != null)
+                    qTreeNode.Enqueue(t.Right);
+            }
+        }
+
+        static void DFS0921(TreeNode0921 tmp)
+        {
+            Stack<TreeNode0921> stackT = new Stack<TreeNode0921>();
+            TreeNode0921 t = tmp;
+            while (t != null || stackT.Count != 0)
+            {
+                while (t != null)
+                {
+
+                    Console.WriteLine( t.value);
+                    stackT.Push(t);
+                    t = t.Left;
+                }
+                if (stackT.Count != 0)
+                {
+                    t = stackT.Peek();
+                    stackT.Pop();
+                    t = t.Right;
+                }
+            }
+        }
+
+        //滴滴笔试
         static void TwoSort(string path)
         {
 
             StreamReader sr = new StreamReader(path, Encoding.Default);
             string line;
-            List<ClassTest> l = new List<ClassTest>();
+            List<ClassTest0921> l = new List<ClassTest0921>();
             while ((line = sr.ReadLine()) != null)
             {
                 string[] strs = line.Split(' ');
-                l.Add(new ClassTest(strs[0], strs[1]));
+                l.Add(new ClassTest0921(strs[0], strs[1]));
             }
             l.Sort();
-            foreach (ClassTest item in l)
+            foreach (ClassTest0921 item in l)
             {
-                Console.WriteLine("{0} {1}",item.a,item.b);
+                Console.WriteLine("{0} {1}", item.a, item.b);
             }
         }
 
