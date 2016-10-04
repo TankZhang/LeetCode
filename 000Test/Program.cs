@@ -74,6 +74,7 @@ namespace _000Test
         {
             Console.ReadKey();
             Console.ReadKey();
+            Console.ReadKey();
         }
 
         //运行多少次
