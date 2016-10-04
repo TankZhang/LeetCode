@@ -73,6 +73,7 @@ namespace _000Test
         static void Main(string[] args)
         {
             Console.ReadKey();
+            Console.ReadKey();
         }
 
         //运行多少次
