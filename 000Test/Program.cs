@@ -57,6 +57,16 @@ namespace _000Test
         public Node0921() { }
         public Node0921(int i) { Value = i; }
     }
+    class MapPoint0922
+    {
+        public int x;
+        public int y;
+        public MapPoint0922(int a, int b)
+        {
+            x = a; y = b;
+        }
+    }
+
 
     class Program
     {
@@ -65,19 +75,117 @@ namespace _000Test
             Console.ReadKey();
         }
 
+        //运行多少次
+        static void Go0923()
+        {
+            int n = 32;
+            int s = 0;
+            for(int i=1;i<=n;i++)
+            {
+                for (int j = 1; j <= n; j++)
+                {
+                    for (int k = 0; k <= (2*n); k++)
+                    {
+                        s++;
+                    }
+                }
+            }
+            Console.WriteLine(s);
+        }
+
+        //浪潮的求时间差
+        static void Langchao0923time()
+        {
+            string str1 = Console.ReadLine();
+            string[] strs1 = str1.Split(':');
+            string str2 = Console.ReadLine();
+            string[] strs2 = str2.Split(':');
+            int[] is1 = new int[3];
+            int[] is2 = new int[3];
+            for (int i = 0; i < 3; i++)
+            {
+                is1[i] = int.Parse(strs1[i]);
+                is2[i] = int.Parse(strs2[i]);
+            }
+            int sum= (is1[0] * 3600 + is1[1] * 60 + is1[2]) - (is2[0] * 3600 + is2[1] * 60 + is2[2]);
+            Console.WriteLine(sum);
+        }
+
+        //浪潮题目
+        static void LangChao0923()
+        {
+            String str;
+            bool flag = true;
+            while ((str = Console.ReadLine()) != null && str != "")
+            {
+                List<MapPoint0922> l = new List<MapPoint0922>();
+                l.Add(new MapPoint0922(0, 0));
+                int x = 0, y = 0;
+                for (int i = 0; i < str.Length; i++)
+                {
+                    switch (str[i])
+                    {
+                        case 'L':
+                            x = l.Last().x - 1;
+                            y = l.Last().y;
+                            break;
+                        case 'R':
+                            x = l.Last().x + 1;
+                            y = l.Last().y;
+                            break;
+                        case 'D':
+                            x = l.Last().x;
+                            y = l.Last().y - 1;
+                            break;
+                        case 'U':
+                            x = l.Last().x;
+                            y = l.Last().y + 1;
+                            break;
+                        default: break;
+                    }
+                    if (IsContain(l, x, y))
+                    {
+                        flag = false;
+                        Console.WriteLine("BUG");
+                        break;
+                    }
+                    l.Add(new MapPoint0922(x, y));
+                }
+                if (flag)
+                    Console.WriteLine("OK");
+                else
+                    flag = true;
+            }
+        }
+        static bool IsContain(List<MapPoint0922> l, int x, int y)
+        {
+            int count = 0;
+            foreach (MapPoint0922 item in l)
+            {
+                int xc = Math.Abs(item.x - x);
+                int yc = Math.Abs(item.y - y);
+                if ((xc == 0 && yc < 2) || (xc < 2 && yc == 0))
+                    count++;
+            }
+            if (count > 1)
+                return true;
+            else
+                return false;
+        }
+
         //只能打开一个程序的办法1,创建互斥体法：
         static void Only1_0922_1()
         {
             bool blnIsRunning;
             Mutex nutexApp = new Mutex(false, Assembly.GetExecutingAssembly().FullName, out blnIsRunning);
             Console.WriteLine(blnIsRunning);
-            if(!blnIsRunning)
+            if (!blnIsRunning)
             {
                 MessageBox.Show("程序已经运行！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             else
-             Console.ReadKey();
+                Console.ReadKey();
         }
         //只能打开一个程序的办法2:保证同时只有一个客户端在运行
         static void Only1_0922_2()
@@ -90,7 +198,7 @@ namespace _000Test
                 return;
             }
         }
-        
+
         //链表反转测试
         static void ReveseLinkTest0921()
         {
@@ -100,7 +208,7 @@ namespace _000Test
             start.Next.Next.Next = new Node0921(4);
             start = ReverseLink0921(start);
             Console.WriteLine("Next is the reversed linklist!");
-            while (start !=null)
+            while (start != null)
             {
                 Console.WriteLine(start.Value);
                 start = start.Next;
@@ -110,7 +218,7 @@ namespace _000Test
         static Node0921 ReverseLink0921(Node0921 start)
         {
             Node0921 now = start.Next;
-            Node0921 before=start;
+            Node0921 before = start;
             while (now.Next != null)
             {
                 Node0921 t = now.Next;
@@ -164,7 +272,7 @@ namespace _000Test
                 while (t != null)
                 {
 
-                    Console.WriteLine( t.value);
+                    Console.WriteLine(t.value);
                     stackT.Push(t);
                     t = t.Left;
                 }

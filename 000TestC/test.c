@@ -242,7 +242,7 @@ void Qiusanliezhi12()
 	}
 	else
 	{
-		for (i = 0; i<len; i++)
+		for (i = 0; i < len; i++)
 		{
 			HashCode = HashCode * 31 + (int)str[i];
 		}
@@ -256,31 +256,31 @@ void Qiusanliezhi12()
 
 void Test912_1()
 {
-		int i;
-		int len = 0;
-		unsigned long int HashCode = 0;
-		char str[1000];
-		gets(str);
-		if (str == NULL)
-		{
-			return;
-		}
-		len = strlen(str);
-		if (len == 1)
-		{
-			HashCode = (int)str[0] * 31;
+	int i;
+	int len = 0;
+	unsigned long int HashCode = 0;
+	char str[1000];
+	gets(str);
+	if (str == NULL)
+	{
+		return;
+	}
+	len = strlen(str);
+	if (len == 1)
+	{
+		HashCode = (int)str[0] * 31;
 
-		}
-		else
+	}
+	else
+	{
+		for (i = 0; i < len; i++)
 		{
-			for (i = 0; i<len; i++)
-			{
-				HashCode = HashCode * 31 + (int)str[i];
-			}
+			HashCode = HashCode * 31 + (int)str[i];
 		}
-		printf("%lu", HashCode);
-		getchar();
-		return 0;
+	}
+	printf("%lu", HashCode);
+	getchar();
+	return 0;
 }
 
 
@@ -297,7 +297,7 @@ void Test9122()
 	printf("%llu", h);
 	getchar();
 }
- 
+
 //
 int Test0921(unsigned int n) {
 	unsigned int c = 0;
@@ -313,7 +313,7 @@ int Test0921_1(int *u, int *v, int m, int n) {
 	int k = m + n - 1;
 	int result = 0;
 	for (i = 0; i < k; i++) {
-		for (j = ((0 > i + 1 - n )? 0 : (i + 1 - n)); j <= ((i<m - 1)?i:(m - 1)); j++)
+		for (j = ((0 > i + 1 - n) ? 0 : (i + 1 - n)); j <= ((i < m - 1) ? i : (m - 1)); j++)
 			result += u[j] * v[i - j];
 	}
 	return result;
@@ -329,8 +329,8 @@ static unsigned char getbits(unsigned char* buffer, unsigned int from, unsigned 
 	y = (buffer[n] << m);
 	if (8 > len)
 		y >>= (8 - len);
-	if(t)
-		y |= (buffer[n + 1]>> (8 - t));
+	if (t)
+		y |= (buffer[n + 1] >> (8 - t));
 	return y;
 }
 
@@ -341,7 +341,7 @@ static unsigned int read_golomb(unsigned char* buffer, unsigned int *init)
 	while (getbits(buffer, n++, 1) == 0)
 		len++;
 	x = len + n;
-	while (n<x)
+	while (n < x)
 	{
 		m = min(x - n, 8);
 		v |= getbits(buffer, n, m);
@@ -359,11 +359,27 @@ static unsigned int read_golomb(unsigned char* buffer, unsigned int *init)
 	return v2;
 }
 
+
+int getzeros0923(unsigned int x)
+{
+	int count = 16;
+	int shift = 16;
+	for (int gap = 8; gap > 0; gap /= 2)
+	{
+		if (((x >> shift) == 0) && ((x >> (shift - 1)) != 0))
+			return 32 - shift;
+		else
+		{
+			if (((x >> shift) == 0))
+				shift -= gap;
+			else
+				shift += gap;
+		}
+	}
+}
 int main(void)
 {
-	int count = 0;
-	for (int i = 1; i < 25; i++)
-		count += i*i;
+	int count = getzeros0923(0x0000ff00);
 
 	printf("%d\n", count);
 	getchar();

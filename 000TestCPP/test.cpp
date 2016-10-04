@@ -43,27 +43,33 @@ public:
 	virtual ~t_classC() {};
 };
 
-
-
-int x = 4;
-void incre()
+ class BBB
 {
-	static int x = 1;
-	x *= x + 1;
-	printf("%d", x);
+	int a;
+public :
+	BBB() {};
+	~BBB() {};
+	virtual void show() { cout << "B"; }
+};
+class  DDD: public BBB
+{
+public:
+	void show(){ cout << "D"; }
+};
+void fun1(BBB *p) { p->show(); }
+void fun2(BBB &r) { r.show(); }
+void fun3(BBB t) {
+	t.show();
 }
 
-int main() {
+class student {
+public:
+	student() { cout << "*"; }
+	student(int a) { cout << "#"; }
+};
 
-	int nLenA = sizeof(t_classA);
-	t_classA oA;
-	int nLenAObject = sizeof(oA);
-	int nLenB = sizeof(t_classB);
-	t_classB oB;
-	int nLenBObject = sizeof(oB);
-	int nLenC = sizeof(t_classC);
-	t_classC oC;
-	int nLenCObject = sizeof(oC);
+int main() {
+	student s1, s2[3], s3(1), *s4[3];
 	getchar();
 }
 
