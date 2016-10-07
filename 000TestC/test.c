@@ -191,7 +191,6 @@ void SortText2()
 
 }
 
-
 //ÇóÉ¢ÁÐÖµ
 void Qiusanliezhi()
 {
@@ -359,7 +358,6 @@ static unsigned int read_golomb(unsigned char* buffer, unsigned int *init)
 	return v2;
 }
 
-
 int getzeros0923(unsigned int x)
 {
 	int count = 16;
@@ -377,11 +375,179 @@ int getzeros0923(unsigned int x)
 		}
 	}
 }
+
+int test1007_1()
+{
+	int a[5] = { 1,2,3,4,5 };
+	int * ptr = (int*)(&a + 1);
+	printf("%d,%d\n", *(a + 1), *(ptr - 1));
+	printf("%d,%d\n", *(a + 1), ptr);
+}
+
+int test1007_2()
+{
+	unsigned int a = 6;
+	int b = -20;
+	if (a+b> 6)
+		printf(">6\n");
+	else
+		printf("<=6\n");
+	printf("%u\n", a+b);
+}
+
+int inc1007(int a)
+{
+	return (++a);
+}
+
+int multi1007(int*a,int *b,int *c)
+{
+	return (*c=*a**b);
+}
+
+typedef int (FUNC1)(int);
+typedef int (FUNC2)(int*, int *, int *);
+
+void showResult1007(FUNC2 fun, int arg1, int *arg2)
+{
+	FUNC1 *p = &inc1007;
+	int temp = p(arg1);
+	fun(&temp, &arg1, arg2);
+	printf("%d\n", *arg2);
+}
+void test1007_3()
+{
+	int a;
+	showResult1007(multi1007, 16, &a);
+}
+
+int f1007(int a)
+{
+	static int c = 1;
+	c = c*a;
+	return c;
+}
+void go1007()
+{
+	int i, k;
+	k =1 ;
+	for (i = 2 ;i <= 3; i++)
+		k += f1007(i);
+	printf("%d\n", k);
+}
+
+void strcopy1007(char *str1, char*str2, int m)
+{
+	char *p1, *p2;
+	p1 = str1 + m;
+	p2 = str2;
+	while (*p1)
+		*p2++ = *p1++;
+	*p2 = '\0';
+}
+void test1007_4()
+{
+	int i, m;
+	char str1[80], str2[80];
+	gets(str1);
+	scanf("%d", &m);
+	strcopy1007(str1, str2, m);
+	puts(str1);
+	puts(str2);
+}
+
+#define S(a,b) a*b
+void test1007_5()
+{
+	int a = 3, area;
+	area = S(a, a + 3);
+	printf("%d\n",area);
+}
+
+typedef struct LINK_LIST_STRUCT
+{
+	struct LINK_LIST_STRUCT *next;
+	int data;
+}LinkList;
+
+LinkList *Merge1007(LinkList *a, LinkList *b)
+{
+	LinkList *head = (LinkList *)malloc(sizeof(LinkList));
+	LinkList *p = a, *q = b, *r = head;
+	while (p&&q)
+	{
+		r->next = (LinkList*)malloc(sizeof(LinkList));
+		r = r->next;
+		r->next = NULL;
+		if (p->data < q->data)
+		{
+			r->data = p->data;
+			p = p->next;
+		}
+		else
+		{
+			r->data = q->data;
+			q = q->next;
+		}
+	}
+	while (p)
+	{
+		r->next = (LinkList*)malloc(sizeof(LinkList));
+		r = r->next;
+		r->next = NULL;
+		r->data = p->data;
+		p = p->next;
+	}
+	while (q)
+	{
+		r->next = (LinkList*)malloc(sizeof(LinkList));
+		r = r->next;
+		r->next = NULL;
+		r->data = q->data;
+		q = q->next;
+	}
+	LinkList *res = head->next;
+	free(head);
+	return res;
+}
+
+void Go1007_6()
+{
+	LinkList *p = (LinkList*)malloc(sizeof(LinkList)), *q = (LinkList*)malloc(sizeof(LinkList));
+	LinkList *s1= p, *s2 = q;
+	s1->data = -2;
+	s2->data = -3;
+	for (int i = 1; i < 5; i++)
+	{
+		s1->next = (LinkList*)malloc(sizeof(LinkList));
+		s1 = s1->next;
+		s1->data = i;
+		s2->next= (LinkList*)malloc(sizeof(LinkList));
+		s2 = s2->next;
+		s2->data = i*i;
+	}
+	s2->next= (LinkList*)malloc(sizeof(LinkList));
+	s2->next->data = 1000;
+	s1->next = NULL;
+	s2->next->next = NULL;
+	LinkList* res = Merge1007(p, q);
+	while (res)
+	{
+		printf("%d\n", res->data);
+		res = res->next;
+	}
+}
+
+void test1007_7()
+{
+	char *p = 'a';
+	printf("%d,%d\n", sizeof(p), sizeof(*p));
+}
+
 int main(void)
 {
-	int count = getzeros0923(0x0000ff00);
-
-	printf("%d\n", count);
+	test1007_7();
+	getchar();
 	getchar();
 }
 
