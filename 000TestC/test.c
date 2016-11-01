@@ -547,6 +547,8 @@ void test1007_7()
 int main(void)
 {
 	test1007_7();
+	test1007_7();
+	test1007_7();
 	getchar();
 	getchar();
 }
