@@ -15,6 +15,7 @@ namespace _1TwoSum
             int target = 6;
             int[] result = TwoSum2(nums, target);
             Console.WriteLine("{0}  {1}", result[0], result[1]);
+            Console.WriteLine("Hello world!");
             Console.ReadKey();
 
         }
