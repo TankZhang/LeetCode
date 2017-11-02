@@ -111,6 +111,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "393UTF-8Validation", "393UT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "476NumberComplement", "476NumberComplement\476NumberComplement.csproj", "{37390E96-2EF4-4981-BFC1-39F71E8624DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "338CountingBits", "338CountingBits\338CountingBits.csproj", "{15D6ECE2-584C-4091-AC89-B8261A8BF96B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -753,6 +755,18 @@ Global
 		{37390E96-2EF4-4981-BFC1-39F71E8624DE}.Release|x64.Build.0 = Release|Any CPU
 		{37390E96-2EF4-4981-BFC1-39F71E8624DE}.Release|x86.ActiveCfg = Release|Any CPU
 		{37390E96-2EF4-4981-BFC1-39F71E8624DE}.Release|x86.Build.0 = Release|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Debug|x64.Build.0 = Debug|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Debug|x86.Build.0 = Debug|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Release|x64.ActiveCfg = Release|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Release|x64.Build.0 = Release|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Release|x86.ActiveCfg = Release|Any CPU
+		{15D6ECE2-584C-4091-AC89-B8261A8BF96B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
