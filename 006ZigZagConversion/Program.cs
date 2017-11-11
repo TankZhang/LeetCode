@@ -11,7 +11,7 @@ namespace _006ZigZagConversion
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Convert("ABCDE", 4));
+            Console.WriteLine(Convert2("ABCDE", 4));
             Console.ReadKey();
         }
         static string Convert(string s, int numRows)
@@ -52,6 +52,25 @@ namespace _006ZigZagConversion
                 }
             }
             return strRet;
+        }
+
+        static string Convert2(string s, int numRows)
+        {
+            int len = s.Length;
+            int idx = 0;
+            StringBuilder[] strs = new StringBuilder[numRows];
+            for (int i = 0; i < numRows; i++)
+                strs[i] = new StringBuilder();
+            while (idx<len)
+            {
+                for (int i = 0; i < numRows&& idx < len; i++)
+                    strs[i].Append( s[idx++]);
+                for (int i = numRows-2; i > 0 && idx < len; i--)
+                    strs[i].Append(s[idx++]);
+            }
+            for (int i = 1; i < numRows; i++)
+                strs[0].Append(strs[i]);
+            return strs[0].ToString();
         }
     }
 }
