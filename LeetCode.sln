@@ -127,8 +127,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "110BalancedBinaryTree", "11
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "645SetMismatch", "645SetMismatch\645SetMismatch.csproj", "{EEFD4BA6-ED0A-4D80-BBDA-1088EC7D4E10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "083RemoveDuplicatesfromSortedList", "083RemoveDuplicatesfromSortedList\083RemoveDuplicatesfromSortedList.csproj", "{DFEA10F7-34C1-484B-8722-2698C8992AD0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -867,18 +865,6 @@ Global
 		{EEFD4BA6-ED0A-4D80-BBDA-1088EC7D4E10}.Release|x64.Build.0 = Release|Any CPU
 		{EEFD4BA6-ED0A-4D80-BBDA-1088EC7D4E10}.Release|x86.ActiveCfg = Release|Any CPU
 		{EEFD4BA6-ED0A-4D80-BBDA-1088EC7D4E10}.Release|x86.Build.0 = Release|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Debug|x64.Build.0 = Debug|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Debug|x86.Build.0 = Debug|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Release|x64.ActiveCfg = Release|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Release|x64.Build.0 = Release|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Release|x86.ActiveCfg = Release|Any CPU
-		{DFEA10F7-34C1-484B-8722-2698C8992AD0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
