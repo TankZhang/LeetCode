@@ -41,7 +41,7 @@
  * 
  */
 
-
+#include <stdbool.h> 
 bool isPalindrome(int x){
     int y = x;
     long z = 0;
