@@ -47,7 +47,7 @@
  * };
  */
 
-/* 递归
+
 bool isSymetric(struct TreeNode* l_tree,struct TreeNode* r_tree)
 {
     if(NULL == l_tree && NULL == r_tree)
@@ -63,6 +63,5 @@ bool isSymmetric(struct TreeNode* root){
         return true;
     return isSymetric(root->left, root->right);
 }
-*/
 
 
